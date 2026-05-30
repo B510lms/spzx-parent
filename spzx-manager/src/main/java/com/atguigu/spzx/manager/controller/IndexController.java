@@ -45,7 +45,7 @@ public class IndexController {
 //        SysUser sysUser = sysUserService.getUserInfo(token) ;
 //        return Result.build(sysUser , ResultCodeEnum.SUCCESS) ;
 //    }
-    public Result<SysUser> getUserInfo() {
+    public Result<SysUser> getUserInfo(@RequestHeader(name = "token") String token) {
         return Result.build(AuthContextUtil.get()  , ResultCodeEnum.SUCCESS) ;
     }
 

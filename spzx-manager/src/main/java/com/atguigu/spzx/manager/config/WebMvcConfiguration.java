@@ -31,7 +31,6 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginAuthInterceptor)
-//                .excludePathPatterns("/admin/system/index/login" , "/admin/system/index/generateValidateCode")
                 .excludePathPatterns(userAuthProperties.getNoAuthUrls())
                 .addPathPatterns("/**");
     }

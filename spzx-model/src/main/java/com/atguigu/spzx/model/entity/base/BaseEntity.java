@@ -14,14 +14,17 @@ public class BaseEntity implements Serializable {
     private Long id;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Schema(description = "创建时间")
+    // 只在响应中显示，请求参数不出现
+    @Schema(description = "创建时间", accessMode = Schema.AccessMode.READ_ONLY)
     private Date createTime;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Schema(description = "修改时间")
+    // 只在响应中显示，请求参数不出现
+    @Schema(description = "修改时间", accessMode = Schema.AccessMode.READ_ONLY)
     private Date updateTime;
 
-    @Schema(description = "是否删除")
+    // 只在响应中显示，内部逻辑删除标记，请求参数不出现
+    @Schema(description = "是否删除", accessMode = Schema.AccessMode.READ_ONLY)
     private Integer isDeleted;
 
 }
