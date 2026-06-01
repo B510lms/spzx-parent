@@ -32,3 +32,9 @@ spzx:
       - /webjars/**
       - /v3/api-docs/**
       - /swagger-resources/**
+
+  minio:
+    endpointUrl: http://192.168.206.128:9001
+    accessKey: admin
+    secreKey: admin123456
+    bucketName: spzx-bucket
