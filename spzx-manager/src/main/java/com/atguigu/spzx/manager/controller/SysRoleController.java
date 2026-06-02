@@ -51,7 +51,7 @@ public class SysRoleController {
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
     }
 
-    @Operation(summary = "分配所有角色")
+    @Operation(summary = "获取所有角色")
     @GetMapping("/findAllRoles/{userId}")
     public Result<Map<String , Object>> findAllRoles(@PathVariable(value = "userId") Long userId) {
         Map<String , Object> map = sysRoleService.findAllRoles(userId);
