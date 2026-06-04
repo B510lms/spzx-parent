@@ -2,6 +2,7 @@ package com.atguigu.spzx.manager.controller;
 
 import com.atguigu.spzx.manager.service.CategoryBrandService;
 import com.atguigu.spzx.model.dto.product.CategoryBrandDto;
+import com.atguigu.spzx.model.entity.product.Brand;
 import com.atguigu.spzx.model.entity.product.CategoryBrand;
 import com.atguigu.spzx.model.vo.common.Result;
 import com.atguigu.spzx.model.vo.common.ResultCodeEnum;
@@ -10,6 +11,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Tag(name = "分类品牌管理")
 @RestController
@@ -45,6 +48,13 @@ public class CategoryBrandController {
     public Result deleteById(@PathVariable Long id) {
         categoryBrandService.deleteById(id);
         return Result.build(null , ResultCodeEnum.SUCCESS) ;
+    }
+
+    @Operation(summary = "查找对应分类的品牌")
+    @GetMapping("/findBrandByCategoryId/{categoryId}")
+    public Result findBrandByCategoryId(@PathVariable Long categoryId) {
+        List<Brand> brandList =  categoryBrandService.findBrandByCategoryId(categoryId);
+        return Result.build(brandList , ResultCodeEnum.SUCCESS) ;
     }
 
 }
