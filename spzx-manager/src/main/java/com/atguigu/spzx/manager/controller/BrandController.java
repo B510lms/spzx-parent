@@ -1,5 +1,7 @@
 package com.atguigu.spzx.manager.controller;
 
+import com.atguigu.common.log.annotation.Log;
+import com.atguigu.common.log.enums.OperatorType;
 import com.atguigu.spzx.manager.service.BrandService;
 import com.atguigu.spzx.model.entity.product.Brand;
 import com.atguigu.spzx.model.vo.common.Result;
@@ -20,6 +22,7 @@ public class BrandController {
     @Autowired
     private BrandService brandService ;
 
+    @Log(title = "品牌列表",businessType = 0,operatorType = OperatorType.MANAGE)
     @Operation(summary = "分页查询")
     @GetMapping("/{page}/{limit}")
     public Result<PageInfo<Brand>> findByPage(@PathVariable Integer page, @PathVariable Integer limit) {
