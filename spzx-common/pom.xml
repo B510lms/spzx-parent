@@ -29,6 +29,7 @@
     <modules>
         <module>common-service</module>
         <module>common-util</module>
+        <module>common-log</module>
     </modules>
 
     <dependencies>

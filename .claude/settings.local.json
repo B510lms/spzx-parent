@@ -1,9 +1,27 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git init *)",
-      "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(*)",
+      "Edit(*)",
+      "Write(*)",
+      "Read(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "TaskCreate(*)",
+      "TaskUpdate(*)",
+      "TaskList(*)",
+      "TaskGet(*)",
+      "TaskOutput(*)",
+      "TaskStop(*)",
+      "Agent(*)",
+      "Skill(*)",
+      "CronCreate(*)",
+      "CronDelete(*)",
+      "CronList(*)",
+      "ScheduleWakeup(*)",
+      "NotebookEdit(*)"
     ]
   }
 }

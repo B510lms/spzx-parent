@@ -3,12 +3,17 @@ package com.atguigu.spzx.common.config;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
+
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class Knife4jConfig {
+
+    // 管理端自定义接口信息
     @Bean
     public GroupedOpenApi adminApi() {      // 创建了一个api接口的分组
         return GroupedOpenApi.builder()
@@ -17,9 +22,15 @@ public class Knife4jConfig {
                 .build();
     }
 
-    /***
-     * @description 自定义接口信息
-     */
+    // 用户端
+    @Bean
+    public GroupedOpenApi webApi() {      // 创建了一个api接口的分组
+        return GroupedOpenApi.builder()
+                .group("web-api")         // 分组名称
+                .pathsToMatch("/api/**")  // 接口请求路径规则
+                .build();
+    }
+
     @Bean
     public OpenAPI customOpenAPI() {
 
