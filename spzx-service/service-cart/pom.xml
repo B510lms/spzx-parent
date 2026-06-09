@@ -4,13 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.atguigu</groupId>
-        <artifactId>spzx-parent</artifactId>
+        <artifactId>spzx-service</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>spzx-service-client</artifactId>
-    <packaging>pom</packaging>
-    <name>spzx-service-client</name>
+    <groupId>com.atgugu</groupId>
+    <artifactId>service-cart</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>service-cart</name>
     <description/>
     <url/>
     <licenses>
@@ -25,37 +26,27 @@
         <tag/>
         <url/>
     </scm>
-
-    <modules>
-        <module>service-product-client</module>
-        <module>service-user-client</module>
-    </modules>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
     <dependencies>
 
         <dependency>
             <groupId>com.atguigu</groupId>
-            <artifactId>common-util</artifactId>
+            <artifactId>service-product-client</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>provided </scope>
         </dependency>
 
         <dependency>
             <groupId>com.atguigu</groupId>
-            <artifactId>spzx-model</artifactId>
+            <artifactId>common-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>provided </scope>
+            <scope>compile</scope>
         </dependency>
 
-        <!-- openfeign依赖 -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
-        <!-- loadbalancer依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-loadbalancer</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
     </dependencies>
