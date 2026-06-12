@@ -6,12 +6,14 @@ import com.atguigu.service.product.mapper.ProductMapper;
 import com.atguigu.service.product.mapper.ProductSkuMapper;
 import com.atguigu.service.product.service.ProductService;
 import com.atguigu.spzx.model.dto.h5.ProductSkuDto;
+import com.atguigu.spzx.model.dto.product.SkuSaleDto;
 import com.atguigu.spzx.model.entity.product.Product;
 import com.atguigu.spzx.model.entity.product.ProductDetails;
 import com.atguigu.spzx.model.entity.product.ProductSku;
 import com.atguigu.spzx.model.vo.h5.ProductItemVo;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.github.xiaoymin.knife4j.core.util.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -77,6 +79,16 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductSku getBySkuId(Long skuId) {
         return productSkuMapper.getById(skuId);
+    }
+
+    @Override
+    public Boolean updateSkuSaleNum(List<SkuSaleDto> skuSaleDtoList) {
+        if(!CollectionUtils.isEmpty(skuSaleDtoList)) {
+            for(SkuSaleDto skuSaleDto : skuSaleDtoList) {
+                productSkuMapper.updateSale(skuSaleDto.getSkuId(), skuSaleDto.getNum());
+            }
+        }
+        return true;
     }
 
 }

@@ -74,4 +74,10 @@ public class CartController {
         List<CartInfo> cartInfoList = cartService.getAllCkecked() ;
         return cartInfoList;
     }
+
+    @GetMapping(value = "/auth/deleteChecked")
+    public Result deleteChecked(@Parameter(description = "登录token", required = true) @RequestHeader("token") String token) {
+        cartService.deleteChecked() ;
+        return Result.build(null , ResultCodeEnum.SUCCESS) ;
+    }
 }

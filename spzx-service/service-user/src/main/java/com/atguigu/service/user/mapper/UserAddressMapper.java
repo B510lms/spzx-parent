@@ -10,4 +10,6 @@ public interface UserAddressMapper {
 
     List<UserAddress> findByUserId(Long userId);
 
+    UserAddress getById(Long id);
+
 }

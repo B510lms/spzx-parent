@@ -1,10 +1,10 @@
-package com.atguigu.service.user.client;
+package com.atguigu.spzx.pay;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceUserClientApplicationTests {
+class PayApplicationTests {
 
     @Test
     void contextLoads() {
