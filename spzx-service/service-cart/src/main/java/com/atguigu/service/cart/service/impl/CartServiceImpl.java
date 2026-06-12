@@ -1,7 +1,7 @@
-package com.atgugu.service.cart.service.impl;
+package com.atguigu.service.cart.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.atgugu.service.cart.service.CartService;
+import com.atguigu.service.cart.service.CartService;
 import com.atguigu.spzx.feign.product.ProductFeignClient;
 import com.atguigu.spzx.model.entity.h5.CartInfo;
 import com.atguigu.spzx.model.entity.product.ProductSku;

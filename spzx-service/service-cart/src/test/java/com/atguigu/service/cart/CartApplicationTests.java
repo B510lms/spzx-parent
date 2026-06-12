@@ -1,4 +1,4 @@
-package com.atgugu.service.cart;
+package com.atguigu.service.cart;
 
 
 import org.junit.Test;

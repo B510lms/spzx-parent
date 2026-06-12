@@ -1,4 +1,4 @@
-package com.atgugu.service.cart;
+package com.atguigu.service.cart;
 
 import com.atguigu.spzx.common.anno.EnableUserLoginAuthInterceptor;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
-package com.atgugu.service.cart.service;
+package com.atguigu.service.cart.service;
 
 import com.atguigu.spzx.model.entity.h5.CartInfo;
 

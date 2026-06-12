@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.atgugu</groupId>
+    <groupId>com.atguigu</groupId>
     <artifactId>service-cart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>service-cart</name>
